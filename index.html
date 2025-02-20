@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Styles Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Alex Styles</h1>
+        <nav>
+          <ul>
+            <li><a href="#about" title="About Me">About Me</a></li>
+            <li><a href="#portfolio" title="Portfolio">Portfolio</a></li>
+            <li><a href="#services" title="Services">Services</a></li>
+            <li>
+              <a href="#testimonials" title="Testimonials">Testimonials</a>
+            </li>
+            <li><a href="#blog" title="Blog">Blog</a></li>
+            <li><a href="#contact" title="Contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <p>
+            Alex Styles is a graphic designer with a passion for creativity and
+            a keen eye for detail. With years of experience in the industry,
+            Alex has worked on a variety of projects ranging from branding and
+            illustration to web design and user interface design.
+          </p>
+          <img
+            src="https://images.pexels.com/photos/7641831/pexels-photo-7641831.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Alex Styles"
+            class="profile-image"
+          />
+        </div>
+      </section>
+
+      <section id="portfolio">
+        <div class="container">
+          <h2>Portfolio</h2>
+          <div class="portfolio-grid">
+            <div class="portfolio-item">
+              <img
+                src="https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Creative Branding for Modern Startups"
+              />
+              <a
+                class="portfolio-link"
+                href="#projectModal"
+                data-title="Creative Branding for Modern Startups"
+                data-description="This project showcases my expertise in creating unique and memorable brand identities for modern startups. From logo design to brand guidelines, I ensured consistency and visual appeal across all brand elements."
+                >View Project</a
+              >
+            </div>
+            <div class="portfolio-item">
+              <img
+                src="https://images.pexels.com/photos/7679662/pexels-photo-7679662.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Innovative Web Design for E-commerce Platforms"
+              />
+              <a
+                class="portfolio-link"
+                href="#projectModal"
+                data-title="Innovative Web Design for E-commerce Platforms"
+                data-description="In this project, I designed a user-friendly and visually appealing e-commerce website. The focus was on enhancing user experience, optimizing navigation, and creating an engaging interface that drives conversions."
+                >View Project</a
+              >
+            </div>
+            <div class="portfolio-item">
+              <img
+                src="https://images.pexels.com/photos/7978207/pexels-photo-7978207.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Artistic Illustrations for Children's Books"
+              />
+              <a
+                class="portfolio-link"
+                href="#projectModal"
+                data-title="Artistic Illustrations for Children's Books"
+                data-description="This project highlights my work in creating whimsical and colorful illustrations for children's books. Each illustration is designed to captivate young readers and bring stories to life with vivid imagery."
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container">
+          <h2>Services</h2>
+          <p>
+            Alex Styles offers a wide range of graphic design services,
+            including:
+          </p>
+          <ul>
+            <li>Branding and Logo Design</li>
+            <li>Illustration</li>
+            <li>Web Design</li>
+            <li>User Interface Design</li>
+            <li>Print Design</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <div class="container">
+          <h2>Testimonials</h2>
+          <blockquote>
+            "Alex is a fantastic designer! Their attention to detail and
+            creativity is unmatched. Highly recommend!" - Client A
+          </blockquote>
+          <blockquote>
+            "Working with Alex was a breeze. They understood our vision and
+            delivered beyond our expectations." - Client B
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="blog">
+        <div class="container">
+          <h2>Blog</h2>
+          <article>
+            <h3>Design Trends in 2025</h3>
+            <p>
+              Stay ahead of the curve with the latest design trends in 2025.
+              From minimalism to bold colors, explore what’s making waves in the
+              design world.
+            </p>
+          </article>
+          <article>
+            <h3>How to Create a Successful Brand</h3>
+            <p>
+              Learn the key elements to creating a successful brand that
+              resonates with your audience and stands out in the market.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Alex Styles. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Project Title</h2>
+        <p>Project description goes here...</p>
+      </div>
+    </div>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("projectModal");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // Function to open the modal and update its content
+      function openModal(event) {
+        event.preventDefault();
+        var link = event.currentTarget;
+        var title = link.getAttribute("data-title");
+        var description = link.getAttribute("data-description");
+
+        modal.querySelector("h2").textContent = title;
+        modal.querySelector("p").textContent = description;
+        modal.style.display = "block";
+      }
+
+      // Attach event listeners to all portfolio links
+      var portfolioLinks = document.querySelectorAll(".portfolio-link");
+      portfolioLinks.forEach(function (link) {
+        link.addEventListener("click", openModal);
+      });
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
