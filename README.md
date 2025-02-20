@@ -17,7 +17,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/alex-styles-portfolio.git
+   git clone https://github.com/ivanismaeel/alex-styles-portfolio.git
    ```
 2. **Navigate to the Project Directory**:
    ```bash
